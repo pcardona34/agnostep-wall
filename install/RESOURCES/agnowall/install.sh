@@ -67,3 +67,16 @@ if [ -f agnowall.sh ];then
 fi
 
 info "The script agnowall.sh has been installed."
+
+if [ -n "$DISPLAY" ];then
+    echo "Context: Xterm..."
+    pushd .
+    /usr/local/bin/agnowall.sh
+    popd
+    ALTERNATE_BG=$HOME/GNUstep/Library/Wallpapers/current.jpg
+    if [ -f ${ALTERNATE_BG} ];then
+        feh --bg-fill ${ALTERNATE_BG}
+    else
+        echo "${ALTERNATE_BG} was not found."
+    fi
+fi

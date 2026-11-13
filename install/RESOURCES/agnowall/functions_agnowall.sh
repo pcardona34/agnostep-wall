@@ -17,7 +17,7 @@ WPCONFDIR=$HOME/.config/agnostep
 if [ ! -d $WPCONFDIR ];then
 	mkdir -p $WPCONFDIR
 fi
-WPCONF=${WPCONFDIR}/wprotate.conf
+WPCONF=${WPCONFDIR}/agnowall.conf
 
 ################################
 ### Function for Install wmrotate
